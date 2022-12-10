@@ -6,7 +6,7 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
-  app.use(express.static(join(__dirname, 'packages')));
+  // app.use(express.static(join(__dirname, 'packages')));
   await app.listen(4000);
 }
 bootstrap();
